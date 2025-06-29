@@ -1,0 +1,30 @@
+{
+  "name": "web-agent-framework",
+  "version": "0.1.0",
+  "description": "A comprehensive multi-agent AI framework for running agents in your browser",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:core": "cd packages/core && npm run build",
+    "build:playground": "cd packages/playground && npm run build",
+    "build": "npm run build:core && npm run build:playground",
+    "dev": "cd packages/playground && npm run dev",
+    "lint": "eslint packages --ext .ts,.js,.svelte",
+    "format": "prettier --write packages",
+    "install:all": "npm install && cd packages/core && npm install && cd ../playground && npm install",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-plugin-svelte": "^2.30.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.0",
+    "prettier-plugin-svelte": "^3.0.0",
+    "typescript": "^5.2.0",
+    "event-emitter": "0.3.5"
+  }
+}
