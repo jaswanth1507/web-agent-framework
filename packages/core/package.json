@@ -1,6 +1,7 @@
 {
   "name": "@web-agent/core",
   "version": "0.1.0",
+  "type": "module",
   "description": "Core framework for web-based multi-agent systems",
   "main": "dist/index.cjs",
   "module": "dist/index.esm.js",
